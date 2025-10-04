@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/macosm.github.io/static/css/main.fcbec9da.css",
-    "main.js": "/macosm.github.io/static/js/main.cccd1446.js",
-    "static/js/453.ad7768ec.chunk.js": "/macosm.github.io/static/js/453.ad7768ec.chunk.js",
-    "static/media/logo.png": "/macosm.github.io/static/media/logo.befc185647b975893ecd.png",
-    "static/media/dog-judging3.png": "/macosm.github.io/static/media/dog-judging3.e2dc1503f7ab04b7b53d.png",
-    "static/media/dog-silly.png": "/macosm.github.io/static/media/dog-silly.25612eec737dfcba8b9d.png",
-    "static/media/dog-surprise.png": "/macosm.github.io/static/media/dog-surprise.a62764ab469cd92b1cfa.png",
-    "static/media/dog-sand.png": "/macosm.github.io/static/media/dog-sand.e354a9ddf9c237f96bf7.png",
-    "index.html": "/macosm.github.io/index.html",
-    "main.fcbec9da.css.map": "/macosm.github.io/static/css/main.fcbec9da.css.map",
-    "main.cccd1446.js.map": "/macosm.github.io/static/js/main.cccd1446.js.map",
-    "453.ad7768ec.chunk.js.map": "/macosm.github.io/static/js/453.ad7768ec.chunk.js.map"
+    "main.css": "/static/css/main.fcbec9da.css",
+    "main.js": "/static/js/main.fe3690db.js",
+    "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "static/media/logo.png": "/static/media/logo.befc185647b975893ecd.png",
+    "static/media/dog-judging3.png": "/static/media/dog-judging3.e2dc1503f7ab04b7b53d.png",
+    "static/media/dog-silly.png": "/static/media/dog-silly.25612eec737dfcba8b9d.png",
+    "static/media/dog-surprise.png": "/static/media/dog-surprise.a62764ab469cd92b1cfa.png",
+    "static/media/dog-sand.png": "/static/media/dog-sand.e354a9ddf9c237f96bf7.png",
+    "index.html": "/index.html",
+    "main.fcbec9da.css.map": "/static/css/main.fcbec9da.css.map",
+    "main.fe3690db.js.map": "/static/js/main.fe3690db.js.map",
+    "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fcbec9da.css",
-    "static/js/main.cccd1446.js"
+    "static/js/main.fe3690db.js"
   ]
 }
