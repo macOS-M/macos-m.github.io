@@ -223,15 +223,30 @@
   z-index: 2;
 }
 
-.social-links a {
+.social-links a,
+.social-links .social-btn {
   color: #4a5568;
   font-size: 1.4rem;
   transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links .social-btn:hover {
   color: #4299e1;
   transform: translateY(-3px);
+}
+
+.social-links .social-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.12);
+  border-radius: 6px;
 }
 
 .scroll-indicator {

@@ -13,14 +13,11 @@ const Footer = () => {
 
           <div className="footer-social-row">
             <div className="footer-social">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/macOS-M" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/marcosmoralesc" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
               </a>
             </div>
           </div>
