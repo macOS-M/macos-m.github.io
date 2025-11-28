@@ -3,12 +3,42 @@
   background: #f7fafc;
 }
 
+/* Ensure contact section uses a centered, wider container and doesn't inherit header flex rules */
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Constrain and pad the section title to match contact-content alignment */
+.contact .section-title {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+/* Make column children align their inner content consistently */
+.contact-content > * {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .contact-info h3 {
@@ -27,6 +57,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.contact-info {
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .contact-item {
@@ -50,6 +84,11 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -62,6 +101,12 @@
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+}
+
+/* Ensure inputs respect padding/box model and don't overflow their column */
+.form-group input,
+.form-group textarea {
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -86,10 +131,38 @@
 .submit-btn:hover {
   background: #3182ce;
 }
+/* Desktop-only: add a little space above the contact content */
+@media (min-width: 769px) {
+  .contact-content {
+    margin-top: 3rem;
+  }
+}
 
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    padding: 0;
+  }
+
+  .contact-details {
+    align-items: center;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+    max-width: 100%;
+  }
+
+
+
+  /* Hide the secondary heading on small screens to reduce clutter */
+  .contact-info h3 {
+    display: none;
   }
 }

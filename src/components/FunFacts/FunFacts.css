@@ -93,6 +93,7 @@
 @media (max-width: 480px) {
   .fun-facts {
     padding: 4rem 1rem;
+    text-align: center;
   }
   
   .section-title {

@@ -23,6 +23,13 @@ const Projects = () => {
       technologies: ['Tech1', 'Tech2', 'Tech3'],
       image: 'project3',
       githubLink: '#'
+    },
+    {
+      title: 'Project 4',
+      description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem',
+      technologies: ['Tech1', 'Tech2', 'Tech3'],
+      image: 'project4',
+      githubLink: '#'
     }
   ];
 

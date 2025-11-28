@@ -37,7 +37,6 @@ useEffect(() => {
 const skillCategories = [
   {
     title: "Programming Languages",
-    icon: "💻",
     skills: [
       { name: "Java", level: "strong" },
       { name: "C#", level: "strong" },
@@ -48,7 +47,6 @@ const skillCategories = [
   },
   {
     title: "Web Development",
-    icon: "🌐",
     skills: [
       { name: "HTML", level: "strong" },
       { name: "CSS", level: "strong" },
@@ -65,7 +63,6 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    icon: "🗄️",
     skills: [
       { name: "SQL", level: "strong" },
       { name: "MongoDB", level: "working" },
@@ -77,7 +74,6 @@ const skillCategories = [
   },
   {
     title: "Tools & Platforms",
-    icon: "🛠️",
     skills: [
       { name: "Git", level: "strong" },
       { name: "GitHub", level: "strong" },
@@ -91,7 +87,6 @@ const skillCategories = [
   },
   {
     title: "Cloud & DevOps",
-    icon: "☁️",
     skills: [
       { name: "AWS", level: "working" },
       { name: "Azure", level: "working" },
@@ -102,7 +97,6 @@ const skillCategories = [
   },
   {
     title: "Methodologies & APIs",
-    icon: "📊",
     skills: [
       { name: "Agile", level: "strong" },
       { name: "SCRUM", level: "strong" },

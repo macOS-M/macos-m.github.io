@@ -1,48 +1,63 @@
 .footer {
   background: #2d3748;
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 3.5rem 0 1.5rem;
 }
 
+/* Footer container scoped to avoid interfering with global .container rules */
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+
 .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.footer-content > * {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
 }
 
 .footer-logo h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #4299e1;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  letter-spacing: 0.2px;
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-links a {
+.footer-logo p {
+  margin: 0;
   color: #cbd5e0;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
 }
 
-.footer-links a:hover {
-  color: #4299e1;
+.footer-social-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
 }
 
 .footer-social {
-  display: flex;
+  display: inline-flex;
   gap: 1rem;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
 }
 
 .footer-social a {
   color: #cbd5e0;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
 }
 
 .footer-social a:hover {
@@ -51,31 +66,32 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 0.75rem;
   border-top: 1px solid #4a5568;
+  color: #a0aec0;
+  font-size: 0.95rem;
 }
 
 .heart {
   color: #e53e3e;
-  animation: heartbeat 2s infinite;
 }
 
-@keyframes heartbeat {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
+/* Responsive: stack columns on small screens */
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .footer-content > * {
+    padding: 0;
+  }
+
   .footer-social {
     justify-content: center;
+    margin-top: 0.5rem;
   }
 }
-a{
-  color:inherit;
-}
+
+/* Ensure footer links inherit color by default */
+.footer a { color: inherit; }
