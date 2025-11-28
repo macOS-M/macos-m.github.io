@@ -43,7 +43,8 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 3rem;
-  align-items: start;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
 }
 
 .project-card {
@@ -52,6 +53,9 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -66,6 +70,26 @@
   justify-content: center;
 }
 
+.project-image .image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem; 
+  box-sizing: border-box;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  object-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 /* Horizontal card layout on wider screens */
 @media (min-width: 900px) {
   .projects-grid {
@@ -73,17 +97,11 @@
     gap: 2rem;
   }
 
-  .project-card {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    gap: 0;
-  }
 
   .project-image {
-    flex: 0 0 40%;
-    min-height: 260px;
-    width: auto;
+    width: 100%;
+    height: 180px;
+    min-height: 140px;
   }
 
   .project-image .image-placeholder {
@@ -95,7 +113,6 @@
   }
 
   .project-content {
-    flex: 1 1 60%;
     padding: 1.5rem 2rem;
   }
 }
@@ -123,7 +140,7 @@
   }
 
   .project-image {
-    height: 160px;
+    height: 140px;
     width: 100%;
   }
 

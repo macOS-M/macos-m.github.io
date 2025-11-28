@@ -14,7 +14,7 @@ const Hero = () => {
           </h1>
           <h2 className="hero-subtitle">Software Engineer</h2>
           <p className="hero-description">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            I design and test high-quality web applications — SDET & full-stack developer with 2+ years experience. See my CV for full details.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
@@ -22,6 +22,9 @@ const Hero = () => {
             </a>
             <a href="#contact" className="btn btn-secondary">
               Contact Me
+            </a>
+            <a href="public/MmoralesCV0.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" download>
+              Download Resume
             </a>
           </div>
         </div>
@@ -39,15 +42,15 @@ const Hero = () => {
 
 
       <div className="social-links">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/macos-M" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/in/marcosmoralesc" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href="mailto:your.email@example.com">
+        <button type="button" className="social-btn" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} aria-label="Open contact form">
           <FaEnvelope />
-        </a>
+        </button>
       </div>
       
     </section>

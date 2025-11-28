@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
+const FORM_ENDPOINT = process.env.REACT_APP_CONTACT_FORM_ENDPOINT || '';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState({ state: 'idle', message: '' });
 
   const handleChange = (e) => {
     setFormData({
@@ -17,10 +20,40 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    // Basic client-side validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus({ state: 'error', message: 'Please complete all fields.' });
+      return;
+    }
+
+    if (!FORM_ENDPOINT) {
+      setStatus({ state: 'error', message: 'Contact endpoint not configured. Set REACT_APP_CONTACT_FORM_ENDPOINT.' });
+      return;
+    }
+
+    setStatus({ state: 'sending', message: 'Sending message…' });
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ name: formData.name, email: formData.email, message: formData.message })
+    })
+      .then(async (res) => {
+        if (res.ok) {
+          setStatus({ state: 'success', message: 'Message sent — thank you!' });
+          setFormData({ name: '', email: '', message: '' });
+        } else {
+          const text = await res.text().catch(() => 'Submit failed');
+          throw new Error(text || 'Submit failed');
+        }
+      })
+      .catch((err) => {
+        console.error('Contact form error:', err);
+        setStatus({ state: 'error', message: 'There was an error sending your message. Please try again later.' });
+      });
   };
 
   return (
@@ -52,6 +85,9 @@ const Contact = () => {
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
+            {!FORM_ENDPOINT && (
+              <div className="form-status warning">Contact endpoint not configured. Set `REACT_APP_CONTACT_FORM_ENDPOINT` to your Formspree URL in `.env.local`.</div>
+            )}
             <div className="form-group">
               <input
                 type="text"
@@ -85,9 +121,13 @@ const Contact = () => {
               ></textarea>
             </div>
             
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={status.state === 'sending'} aria-busy={status.state === 'sending'}>
+              {status.state === 'sending' ? 'Sending…' : 'Send Message'}
             </button>
+
+            {status.message && (
+              <div className={`form-status ${status.state}`}>{status.message}</div>
+            )}
           </form>
         </div>
       </div>

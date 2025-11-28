@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import profile from '../../assets/profile.jpg';
 
 const About = () => {
   return (
@@ -11,11 +12,10 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Software Engineer with experience as an SDET and QA Engineer, specializing in test automation, full-stack development, and systems optimization.
             </p>
-            
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              When I’m not coding, I’m usually outdoors spending time with my dog on long walks. I’m also an avid gamer and skateboarder, two hobbies that taught me persistence and iterative problem solving. Whether it’s landing a trick or beating a tough level, I approach challenges by trying different angles until something works, a mindset I bring into debugging and improving software every day.
             </p>
 
             <div className="about-stats">
@@ -36,7 +36,7 @@ const About = () => {
 
           <div className="about-image">
             <div className="image-placeholder">
-              <span>About Me Image</span>
+              <img src={profile} alt="Marcos Morales - Software Engineer" />
             </div>
           </div>
         </div>
