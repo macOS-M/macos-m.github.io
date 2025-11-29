@@ -10,28 +10,28 @@ const Projects = () => {
     {
       title: 'Intern Software Engineer — OfficeSpace Software',
       description: 'Gained full-stack development experience using React and Ruby on Rails while contributing to the improvement of internal tools and features. Worked closely with developers to resolve tickets and ensure high-quality releases. Supported QA efforts as an SDET by validating code and writing RSpec tests that significantly reduced bugs and strengthened overall product stability.',
-      technologies: ['React', 'Ruby on Rails'],
+      technologies: ['React', 'Ruby on Rails', 'Redis', 'RSpec', 'graphQL'],
       image: officeLogo,
       githubLink: 'https://www.officespacesoftware.com/'
     },
     {
       title: 'Intern Software Engineer — Duck Studios',
       description: 'Contributed to multiple software initiatives, including chatbot enhancements, REST microservice integrations, and internal application improvements. Optimized frontend code and automated workflows to increase team efficiency. Supported infrastructure migration efforts and maintained WordPress sites to improve performance and user experience.',
-      technologies: ['JavaScript', 'WordPress', 'REST APIs'],
+      technologies: ['JavaScript', 'WordPress', 'REST APIs', 'Zapier'],
       image: duckStudiosLogo,
       githubLink: 'https://www.linkedin.com/company/duckstudios/'
     },
     {
       title: 'Cozy Coon Cabins',
       description: 'Hotel cabin rental platform, uniquely themed around raccoons. Users can browse available cabins, book stays, and leave reviews about their experiences. The app features an admin dashboard for managing cabins and tracking booking performance',
-      technologies: ['Ruby on Rails', 'Javascript', 'Bootstrap'],
+      technologies: ['Ruby on Rails', 'Javascript', 'Bootstrap','PostgreSQL'],
         image: cozypng,
       githubLink: 'https://github.com/macOS-M/cooncabinsProject'
     },
     {
       title: 'TechLabs',
       description: 'TechLabs is a multi-layered application designed to manage medical appointments, allowing users to browse available schedules, select healthcare providers, and book appointments efficiently.',
-      technologies: ['C#', 'Javascript', 'CSS'],
+      technologies: ['C#', '.NET', 'Azure','Javascript', 'CSS','MySQL'],
       image: techlabs,
       githubLink: 'https://github.com/macOS-M/TechLabs'
     }
