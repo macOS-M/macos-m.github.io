@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: 'TechLabs',
       description: 'TechLabs is a multi-layered application designed to manage medical appointments, allowing users to browse available schedules, select healthcare providers, and book appointments efficiently.',
-      technologies: ['C#', '.NET', 'Azure','Javascript', 'CSS','MySQL'],
+      technologies: ['C#', '.NET', 'Azure','Javascript','MySQL', 'PayPal API', 'Bootstrap'],
       image: techlabs,
       githubLink: 'https://github.com/macOS-M/TechLabs'
     }
